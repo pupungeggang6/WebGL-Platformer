@@ -3,8 +3,8 @@ let gl
 let canvasUI
 let context
 
-let vShader, fShader, progarm, vao, vbo, bt, gt
-let laPosition, laColor, laTexcoord, luColor, luTranslate, luScale, luRotate, luCameraT, luCameraS, luCameraR, luCameraP
+let vShader, fShader, progarm, vaUI, vbUI, gt
+let laPosition, laColor, laTexcoord, luColor, luTranslate, luScale, luRotate, luCameraT, luCameraS, luCameraR, luCameraP, luMode
 
 let gameLoop
 let frameCurrent

@@ -3,10 +3,8 @@ function loopTitle() {
 }
 
 function renderTitle() {
-    renderInit()
     renderInitUI()
-
-
+    renderInit()
 }
 
 function keyDownTitle(key) {
