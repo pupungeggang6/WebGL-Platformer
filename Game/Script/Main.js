@@ -3,7 +3,7 @@ window.onerror = errorHandle
 window.oncontextmenu = rightClick
 
 function main() {
-    canvas = document.getElemenyById('Screen')
+    canvas = document.getElementById('Screen')
     gl = canvas.getContext('webgl2')
     canvasUI = document.createElement('canvas')
     canvasUI.width = 1280
@@ -11,7 +11,7 @@ function main() {
     context = canvasUI.getContext('2d')
 
     window.addEventListener('keydown', keyDown, false)
-    canvas.addEventListener('keyup', keyUp, false)
+    canvas.addEventListener('mouseup', mouseUp, false)
 
     imageLoad()
     glInit()
@@ -37,6 +37,10 @@ function mouseUp(event) {
     let pos = {x: (event.clientX - targetRect.left) / targetRect.width * canvas.width, y: (event.clientY - targetRect.top) / targetRect.height * canvas.height} 
     let button = event.button
 
+    if (state === 'Start') {
+        state = ''
+    }
+
     if (scene === 'Title') {
         mouseUpTitle(pos, button)
     }
@@ -44,6 +48,10 @@ function mouseUp(event) {
 
 function keyDown(event) {
     let key = event.key
+
+    if (state === 'Start') {
+        state = ''
+    }
 
     if (scene === 'Title') {
         keyDownTitle(key)

@@ -1,4 +1,6 @@
 function renderInit() {
+    gl.clearColor(0.0, 0.0, 0.0, 1.0)
+    gl.clear()
 }
 
 function renderInitUI() {
